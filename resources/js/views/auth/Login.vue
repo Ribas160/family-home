@@ -3,15 +3,18 @@
         <h1>Авторизация</h1>
         <div class="form-group" v-bind:class="{error: errors.name}">
             <label for="name">Имя</label>
-            <input type="text" v-model="data.name" class="form-control" id="name" placeholder="Enter email">
+            <input type="text" v-model="data.name" class="form-control" id="name" placeholder="Введите имя">
             <small class="form-text" v-if="errors.name">{{ errors.name[0] }}</small>
         </div>
         <div class="form-group" v-bind:class="{error: errors.password}">
             <label for="password">Пароль</label>
-            <input type="password" v-model="data.password" class="form-control" id="password" placeholder="Password">
+            <input type="password" v-model="data.password" class="form-control" id="password" placeholder="Введите пароль">
             <small class="form-text" v-if="errors.password">{{ errors.password[0] }}</small>
         </div>
-        <button type="submit" class="btn btn-primary" v-on:click="submit">Submit</button>
+        <div class="button">
+            <button type="submit" class="btn btn-primary" v-on:click="submit">Отправить</button>
+            <span v-on:click="$router.push('/register')">Зарегестрироваться</span>
+        </div>
     </div>
 </template>
 <script>
@@ -67,5 +70,19 @@ export default {
 
 .error input {
     border-color: #d9534f;
+}
+
+.button {
+    display: flex;
+    align-items: flex-end;
+}
+
+.button span {
+    margin-left: 30px;
+    text-decoration: underline;
+}
+
+.button span:hover {
+    cursor: pointer;
 }
 </style>

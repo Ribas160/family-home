@@ -12183,6 +12183,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -12237,6 +12240,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _api_auth__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../api/auth */ "./resources/js/api/auth.js");
+//
+//
+//
 //
 //
 //
@@ -17178,7 +17184,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.form[data-v-46ec553e] {\n    width: 90%;\n    max-width: 700px;\n    margin: 0 auto;\n    padding-top: 20px;\n}\n.error label[data-v-46ec553e], .error small[data-v-46ec553e] {\n    color: #d9534f;\n}\n.error input[data-v-46ec553e] {\n    border-color: #d9534f;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.form[data-v-46ec553e] {\n    width: 90%;\n    max-width: 700px;\n    margin: 0 auto;\n    padding-top: 20px;\n}\n.error label[data-v-46ec553e], .error small[data-v-46ec553e] {\n    color: #d9534f;\n}\n.error input[data-v-46ec553e] {\n    border-color: #d9534f;\n}\n.button[data-v-46ec553e] {\n    display: flex;\n    align-items: flex-end;\n}\n.button span[data-v-46ec553e] {\n    margin-left: 30px;\n    text-decoration: underline;\n}\n.button span[data-v-46ec553e]:hover {\n    cursor: pointer;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -17202,7 +17208,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.form[data-v-0a273bdb] {\n    width: 90%;\n    max-width: 700px;\n    margin: 0 auto;\n    padding-top: 20px;\n}\n.error label[data-v-0a273bdb], .error small[data-v-0a273bdb] {\n    color: #d9534f;\n}\n.error input[data-v-0a273bdb] {\n    border-color: #d9534f;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.form[data-v-0a273bdb] {\n    width: 90%;\n    max-width: 700px;\n    margin: 0 auto;\n    padding-top: 20px;\n}\n.error label[data-v-0a273bdb], .error small[data-v-0a273bdb] {\n    color: #d9534f;\n}\n.error input[data-v-0a273bdb] {\n    border-color: #d9534f;\n}\n.button[data-v-0a273bdb] {\n    display: flex;\n    align-items: flex-end;\n}\n.button span[data-v-0a273bdb] {\n    margin-left: 30px;\n    text-decoration: underline;\n}\n.button span[data-v-0a273bdb]:hover {\n    cursor: pointer;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -84898,7 +84904,7 @@ var render = function() {
             }
           ],
           staticClass: "form-control",
-          attrs: { type: "text", id: "name", placeholder: "Enter email" },
+          attrs: { type: "text", id: "name", placeholder: "Введите имя" },
           domProps: { value: _vm.data.name },
           on: {
             input: function($event) {
@@ -84934,7 +84940,11 @@ var render = function() {
             }
           ],
           staticClass: "form-control",
-          attrs: { type: "password", id: "password", placeholder: "Password" },
+          attrs: {
+            type: "password",
+            id: "password",
+            placeholder: "Введите пароль"
+          },
           domProps: { value: _vm.data.password },
           on: {
             input: function($event) {
@@ -84954,15 +84964,29 @@ var render = function() {
       ]
     ),
     _vm._v(" "),
-    _c(
-      "button",
-      {
-        staticClass: "btn btn-primary",
-        attrs: { type: "submit" },
-        on: { click: _vm.submit }
-      },
-      [_vm._v("Submit")]
-    )
+    _c("div", { staticClass: "button" }, [
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-primary",
+          attrs: { type: "submit" },
+          on: { click: _vm.submit }
+        },
+        [_vm._v("Отправить")]
+      ),
+      _vm._v(" "),
+      _c(
+        "span",
+        {
+          on: {
+            click: function($event) {
+              return _vm.$router.push("/register")
+            }
+          }
+        },
+        [_vm._v("Зарегестрироваться")]
+      )
+    ])
   ])
 }
 var staticRenderFns = []
@@ -85142,15 +85166,29 @@ var render = function() {
       ]
     ),
     _vm._v(" "),
-    _c(
-      "button",
-      {
-        staticClass: "btn btn-primary",
-        attrs: { type: "submit" },
-        on: { click: _vm.submit }
-      },
-      [_vm._v("Submit")]
-    )
+    _c("div", { staticClass: "button" }, [
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-primary",
+          attrs: { type: "submit" },
+          on: { click: _vm.submit }
+        },
+        [_vm._v("Отправить")]
+      ),
+      _vm._v(" "),
+      _c(
+        "span",
+        {
+          on: {
+            click: function($event) {
+              return _vm.$router.push("/login")
+            }
+          }
+        },
+        [_vm._v("Авторизация")]
+      )
+    ])
   ])
 }
 var staticRenderFns = []

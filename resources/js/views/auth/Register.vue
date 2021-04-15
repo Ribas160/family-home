@@ -20,7 +20,10 @@
             <label for="passwordConfirm">Повторите пароль</label>
             <input type="password" v-model="data.password_confirmation" class="form-control" id="passwordConfirm" placeholder="Password">
         </div>
-        <button type="submit" class="btn btn-primary" v-on:click="submit">Submit</button>
+        <div class="button">
+            <button type="submit" class="btn btn-primary" v-on:click="submit">Отправить</button>
+            <span v-on:click="$router.push('/login')">Авторизация</span>
+        </div>
     </div>
 </template>
 <script>
@@ -70,5 +73,19 @@
 
     .error input {
         border-color: #d9534f;
+    }
+
+    .button {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .button span {
+        margin-left: 30px;
+        text-decoration: underline;
+    }
+
+    .button span:hover {
+        cursor: pointer;
     }
 </style>
