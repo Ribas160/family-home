@@ -4,10 +4,12 @@ import Router from 'vue-router';
 Vue.use(Router);
 
 import ExampleComponent from "./components/ExampleComponent";
+import api from "./api/auth";
 import Register from "./views/auth/Register";
 import Login from "./views/auth/Login";
 import Index from "./views/Index";
 import Temperature from "./views/devices/Temperature";
+import Humidity from "./views/devices/Humidity";
 
 const router =  new Router({
     // base: `/${window._locale}/`,
@@ -30,6 +32,14 @@ const router =  new Router({
             }
         },
         {
+            path: '/humidity',
+            name: 'humidity',
+            component: Humidity,
+            meta: {
+                requiresAuth: true,
+            },
+        },
+        {
             path: '/register',
             name: 'register',
             component: Register,
@@ -50,11 +60,13 @@ const router =  new Router({
 
 router.beforeEach((to, from, next) => {
     if (to.matched.some(record => record.meta.requiresAuth)) {
-        if (localStorage.getItem('FAToken') == null) {
-            next({name: 'login'});
-        } else {
+        api.isAuth().then(() => {
             next();
-        }
+        }).catch(() => next({name: 'login'}));
+    } else if (to.matched.some(record => record.meta.guest)) {
+        api.isAuth().then(() => {
+            next({name: 'index'})
+        }).catch(() => next());
     } else {
         next();
     }

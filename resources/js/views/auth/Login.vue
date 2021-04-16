@@ -36,7 +36,7 @@ export default {
 
             api.login(this.data)
                 .then(res => {
-                    localStorage.setItem('user', res.data.user);
+                    localStorage.setItem('user', JSON.stringify(res.data.user));
                     localStorage.setItem('FAToken', res.data.token);
                     this.$router.push('/');
                 })

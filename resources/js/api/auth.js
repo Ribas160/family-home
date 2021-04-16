@@ -1,11 +1,5 @@
-let url = 'http://localhost/projects/tmp/family-home/public';
+import csrf from "./config";
 
-import axios from "axios";
-
-axios.defaults.withCredentials = true;
-axios.defaults.baseURL = 'http://localhost/projects/tmp/family-home/public/';
-
-let csrf = axios.get('sanctum/csrf-cookie');
 export default {
     register(data) {
         return csrf.then(() => {
@@ -20,11 +14,22 @@ export default {
     },
 
     logout() {
-        axios.post('api/logout').then(res => {
-            if (res.request.status === 200) {
-                localStorage.removeItem('user');
-                localStorage.removeItem('FAToken');
-            }
+        let token = localStorage.getItem('FAToken');
+
+        return csrf.then(() => {
+            return axios.post('api/logout', {}, {
+                headers: { Authorization: `Bearer ${token}` },
+            });
+        });
+    },
+
+    isAuth() {
+        let token = localStorage.getItem('FAToken');
+
+        return csrf.then(() => {
+            return axios.get('api/user', {
+                headers: { Authorization: `Bearer ${token}` },
+            });
         });
     }
 }

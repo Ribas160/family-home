@@ -90,7 +90,7 @@
         max-width: 1140px;
         height: 100vh;
         padding: 0;
-        background: #0275d8;
+        background: #f0ad4e;
     }
 
     .value {

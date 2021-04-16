@@ -21,10 +21,13 @@ Route::post('/login', [\App\Http\Controllers\AuthController::class, 'login']);
 
 // Protected routes
 Route::group(['middleware' => ['auth:sanctum']], function () {
-    Route::post('/logout', [\App\Http\Controllers\AuthController::class, 'logout']);
-    Route::get('/devices/temperature', [\App\Http\Controllers\DeviceController::class, 'temperature']);
-});
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+    Route::get('/user', function (Request $request) {
+        return $request->user();
+    });
+
+    Route::post('/logout', [\App\Http\Controllers\AuthController::class, 'logout']);
+
+    Route::get('/devices/temperature', [\App\Http\Controllers\DeviceController::class, 'temperature']);
+    Route::get('/devices/humidity', [\App\Http\Controllers\DeviceController::class, 'humidity']);
 });
