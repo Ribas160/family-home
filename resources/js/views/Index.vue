@@ -86,7 +86,10 @@
         position: absolute;
         top: 0;
         left: 0;
+        right: 0;
         width: 100%;
+        max-width: 1140px;
+        margin: 0 auto;
         padding: 10px 0;
         display: flex;
         align-items: center;
@@ -111,6 +114,10 @@
         overflow: hidden;
     }
 
+    .user:hover {
+        cursor: pointer;
+    }
+
     .usermenu {
         margin-top: 10px;
         text-decoration: underline;
@@ -123,6 +130,10 @@
     .camera, .temperature, .humidity {
         font-size: 60px;
         color: #fff;
+    }
+
+    .camera:hover, .temperature:hover, .humidity:hover {
+        cursor: pointer;
     }
 
     .camera {

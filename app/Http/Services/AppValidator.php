@@ -7,11 +7,15 @@ class AppValidator
 {
 
 
+    /**
+     * @param object $request
+     * @return mixed
+     */
     public static function register(object $request)
     {
         return $request->validate([
             'name' => 'required|string|unique:users,name',
-            'email' => 'required|string|unique:users,email',
+            'email' => 'required|string|email|unique:users,email',
             'password' => 'required|string|confirmed',
         ],
         [
@@ -20,6 +24,7 @@ class AppValidator
             'name.unique' => 'Пользователь с таким именем уже зарегестрирован',
             'email.required' => 'Email не может быть пустым',
             'email.string' => 'Email должен быть строкой',
+            'email.email' => 'Не верный формат email адреса',
             'email.unique' => 'Пользователь с таким email уже зарегестрирован',
             'password.required' => 'Пароль не может быть пустым',
             'password.string' => 'Пароль должен быть строкой',
@@ -28,6 +33,10 @@ class AppValidator
     }
 
 
+    /**
+     * @param object $request
+     * @return mixed
+     */
     public static function login(object $request)
     {
         return $request->validate([

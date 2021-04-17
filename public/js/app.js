@@ -12445,11 +12445,11 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      minValue: 20,
+      minValue: 10,
       maxValue: 80,
-      segmentStops: [20, 30, 60, 80],
+      segmentStops: [10, 30, 60, 80],
       segmentColors: ['#f0ad4e', '#5cb85c', '#d9534f'],
-      value: 20,
+      value: 10,
       humidity: 0
     };
   },
@@ -12548,11 +12548,11 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      minValue: 16,
-      maxValue: 28,
-      segmentStops: [16, 20, 24, 28],
+      minValue: 12,
+      maxValue: 36,
+      segmentStops: [12, 20, 28, 36],
       segmentColors: ['#8ecbf3', '#5cb85c', '#d9534f'],
-      value: 16,
+      value: 12,
       temperature: 0
     };
   },
@@ -17433,7 +17433,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.container[data-v-494d9643] {\n    width: 100%;\n    height: calc(100% - 52px);\n    max-width: 1140px;\n    margin-top: 52px;\n    padding: 0;\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n}\n.grid-right[data-v-494d9643] {\n    grid-template-rows: repeat(2, 1fr);\n}\nheader[data-v-494d9643] {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    padding: 10px 0;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    color: #000;\n    background: #fff;\n}\n.title[data-v-494d9643] {\n    font-size: 20px;\n}\n.user[data-v-494d9643] {\n    position: absolute;\n    top: 29%;\n    right: 10px;\n    padding: 0 5px;\n    height: 18px;\n    display: flex;\n    flex-direction: column;\n    background: #fff;\n    overflow: hidden;\n}\n.usermenu[data-v-494d9643] {\n    margin-top: 10px;\n    text-decoration: underline;\n}\n.icon[data-v-494d9643] {\n    margin-right: 5px;\n}\n.camera[data-v-494d9643], .temperature[data-v-494d9643], .humidity[data-v-494d9643] {\n    font-size: 60px;\n    color: #fff;\n}\n.camera[data-v-494d9643] {\n    height: 100%;\n    background: #292b2c;\n}\n.temperature[data-v-494d9643] {\n    height: 50%;\n    background: #f0ad4e;\n}\n.humidity[data-v-494d9643] {\n    height: 50%;\n    background: #0275d8;\n}\n\n/* Animation */\n.openMenu[data-v-494d9643] {\n    -webkit-animation: openMenu-data-v-494d9643 0.5s ease;\n            animation: openMenu-data-v-494d9643 0.5s ease;\n}\n.closeMenu[data-v-494d9643] {\n    -webkit-animation: closeMenu-data-v-494d9643 0.5s ease;\n            animation: closeMenu-data-v-494d9643 0.5s ease;\n}\n@-webkit-keyframes openMenu-data-v-494d9643 {\n0% {\n        height: 18px;\n}\n100% {\n        height: 56px;\n}\n}\n@keyframes openMenu-data-v-494d9643 {\n0% {\n        height: 18px;\n}\n100% {\n        height: 56px;\n}\n}\n@-webkit-keyframes closeMenu-data-v-494d9643 {\n0% {\n        height: 56px;\n}\n100% {\n        height: 18px;\n}\n}\n@keyframes closeMenu-data-v-494d9643 {\n0% {\n        height: 56px;\n}\n100% {\n        height: 18px;\n}\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.container[data-v-494d9643] {\n    width: 100%;\n    height: calc(100% - 52px);\n    max-width: 1140px;\n    margin-top: 52px;\n    padding: 0;\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n}\n.grid-right[data-v-494d9643] {\n    grid-template-rows: repeat(2, 1fr);\n}\nheader[data-v-494d9643] {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    width: 100%;\n    max-width: 1140px;\n    margin: 0 auto;\n    padding: 10px 0;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    color: #000;\n    background: #fff;\n}\n.title[data-v-494d9643] {\n    font-size: 20px;\n}\n.user[data-v-494d9643] {\n    position: absolute;\n    top: 29%;\n    right: 10px;\n    padding: 0 5px;\n    height: 18px;\n    display: flex;\n    flex-direction: column;\n    background: #fff;\n    overflow: hidden;\n}\n.user[data-v-494d9643]:hover {\n    cursor: pointer;\n}\n.usermenu[data-v-494d9643] {\n    margin-top: 10px;\n    text-decoration: underline;\n}\n.icon[data-v-494d9643] {\n    margin-right: 5px;\n}\n.camera[data-v-494d9643], .temperature[data-v-494d9643], .humidity[data-v-494d9643] {\n    font-size: 60px;\n    color: #fff;\n}\n.camera[data-v-494d9643]:hover, .temperature[data-v-494d9643]:hover, .humidity[data-v-494d9643]:hover {\n    cursor: pointer;\n}\n.camera[data-v-494d9643] {\n    height: 100%;\n    background: #292b2c;\n}\n.temperature[data-v-494d9643] {\n    height: 50%;\n    background: #f0ad4e;\n}\n.humidity[data-v-494d9643] {\n    height: 50%;\n    background: #0275d8;\n}\n\n/* Animation */\n.openMenu[data-v-494d9643] {\n    -webkit-animation: openMenu-data-v-494d9643 0.5s ease;\n            animation: openMenu-data-v-494d9643 0.5s ease;\n}\n.closeMenu[data-v-494d9643] {\n    -webkit-animation: closeMenu-data-v-494d9643 0.5s ease;\n            animation: closeMenu-data-v-494d9643 0.5s ease;\n}\n@-webkit-keyframes openMenu-data-v-494d9643 {\n0% {\n        height: 18px;\n}\n100% {\n        height: 56px;\n}\n}\n@keyframes openMenu-data-v-494d9643 {\n0% {\n        height: 18px;\n}\n100% {\n        height: 56px;\n}\n}\n@-webkit-keyframes closeMenu-data-v-494d9643 {\n0% {\n        height: 56px;\n}\n100% {\n        height: 18px;\n}\n}\n@keyframes closeMenu-data-v-494d9643 {\n0% {\n        height: 56px;\n}\n100% {\n        height: 18px;\n}\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

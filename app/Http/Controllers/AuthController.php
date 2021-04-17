@@ -10,6 +10,10 @@ class AuthController extends Controller
 {
 
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\Response
+     */
         public function register(Request $request)
         {
             $fields = AppValidator::register($request);
@@ -20,6 +24,10 @@ class AuthController extends Controller
         }
 
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\Response
+     */
         public function login(Request $request)
         {
             $fields = AppValidator::login($request);
@@ -34,6 +42,10 @@ class AuthController extends Controller
         }
 
 
+        /**
+         * @param Request $request
+         * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\Response
+         */
         public function logout(Request $request)
         {
             auth()->user()->tokens()->delete();

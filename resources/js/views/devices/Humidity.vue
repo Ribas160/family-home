@@ -28,11 +28,11 @@ export default {
     components: {Header, VueSpeedometer },
     data() {
         return {
-            minValue: 20,
+            minValue: 10,
             maxValue: 80,
-            segmentStops: [20, 30, 60, 80],
+            segmentStops: [10, 30, 60, 80],
             segmentColors: ['#f0ad4e', '#5cb85c', '#d9534f'],
-            value: 20,
+            value: 10,
             humidity: 0,
         }
     },
