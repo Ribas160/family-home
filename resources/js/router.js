@@ -3,13 +3,14 @@ import Router from 'vue-router';
 
 Vue.use(Router);
 
-import ExampleComponent from "./components/ExampleComponent";
+
 import api from "./api/auth";
 import Register from "./views/auth/Register";
 import Login from "./views/auth/Login";
 import Index from "./views/Index";
 import Temperature from "./views/devices/Temperature";
 import Humidity from "./views/devices/Humidity";
+import Camera from "./views/devices/Camera";
 
 const router =  new Router({
     // base: `/${window._locale}/`,
@@ -35,6 +36,14 @@ const router =  new Router({
             path: '/humidity',
             name: 'humidity',
             component: Humidity,
+            meta: {
+                requiresAuth: true,
+            },
+        },
+        {
+            path: '/camera',
+            name: 'camera',
+            component: Camera,
             meta: {
                 requiresAuth: true,
             },

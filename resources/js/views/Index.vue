@@ -13,7 +13,7 @@
             </div>
         </header>
         <div>
-            <div class="camera d-flex align-items-center justify-content-center">
+            <div class="camera d-flex align-items-center justify-content-center" v-on:click="$router.push('/camera')">
                 <font-awesome-icon icon="video" size="1x" />
             </div>
         </div>
