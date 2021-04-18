@@ -2,7 +2,6 @@
     <header>
         <div class="back" v-if="$route.name !== 'index'" v-on:click="$router.push('/')">
             <font-awesome-icon class="icon" icon="arrow-left" />
-<!--            Назад-->
         </div>
         <div class="title">{{ title }}</div>
     </header>
@@ -39,6 +38,10 @@
         left: 10px;
         display: flex;
         align-items: center;
+    }
+
+    .back:hover {
+        cursor: pointer;
     }
 
     .title {
