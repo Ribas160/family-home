@@ -1,0 +1,70 @@
+{
+    "name": "Family home",
+    "short_name": "FH",
+    "description": "Smart home",
+    "lang": "ru-RU",
+    "start_url": "https://ribas160.ngrok.io",
+    "scope": "/family-home/",
+    "display": "standalone",
+    "theme_color": "#0275D8",
+    "background_color": "#E6E6FA",
+
+    "icons": [
+        {
+            "src": "https://ribas160.ngrok.io/family-home/icons/apple-icon-57x57.png",
+            "sizes": "57x57"
+        },
+        {
+            "src": "https://ribas160.ngrok.io/family-home/icons/apple-icon-60x60.png",
+            "sizes": "60x60"
+        },
+        {
+            "src": "https://ribas160.ngrok.io/family-home/icons/apple-icon-72x72.png",
+            "sizes": "72x72"
+        },
+        {
+            "src": "https://ribas160.ngrok.io/family-home/icons/apple-icon-76x76.png",
+            "sizes": "76x76"
+        },
+        {
+            "src": "https://ribas160.ngrok.io/family-home/icons/apple-icon-114x114.png",
+            "sizes": "114x114"
+        },
+        {
+            "src": "https://ribas160.ngrok.io/family-home/icons/apple-icon-120x120.png",
+            "sizes": "120x120"
+        },
+        {
+            "src": "https://ribas160.ngrok.io/family-home/icons/apple-icon-144x144.png",
+            "sizes": "144x144"
+        },
+        {
+            "src": "https://ribas160.ngrok.io/family-home/icons/apple-icon-152x152.png",
+            "sizes": "152x152"
+        },
+        {
+            "src": "https://ribas160.ngrok.io/family-home/icons/apple-icon-180x180.png",
+            "sizes": "180x180"
+        },
+        {
+            "src": "https://ribas160.ngrok.io/family-home/icons/android-icon-192x192.png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "https://ribas160.ngrok.io/family-home/icons/favicon-32x32.png",
+            "sizes": "32x32"
+        },
+        {
+            "src": "https://ribas160.ngrok.io/family-home/icons/favicon-96x96.png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "https://ribas160.ngrok.io/family-home/icons/favicon-16x16.png",
+            "sizes": "16x16"
+        },
+        {
+            "src": "https://ribas160.ngrok.io/family-home/icons/ms-icon-144x144.png",
+            "sizes": "144x144"
+        }
+    ]
+}

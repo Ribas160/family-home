@@ -14,7 +14,7 @@ const mix = require('laravel-mix');
 // Override mix internal webpack output configuration
 mix.webpackConfig({
     output: {
-        chunkFilename: 'js/[name].js',//replace with your path
+        chunkFilename: 'js/[name].js',
         publicPath: '/projects/tmp/family-home/public/',
     },
 });
