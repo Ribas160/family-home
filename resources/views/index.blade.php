@@ -11,5 +11,12 @@
 <body>
     <div id="app"></div>
     <script src="{{ asset('js/app.js') }}"></script>
+    <script>
+        import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+
+        const el = document.createElement('pwa-update');
+        document.body.appendChild(el);
+    </script>
+    <script src="{{ asset('js/sw.js') }}"></script>
 </body>
 </html>

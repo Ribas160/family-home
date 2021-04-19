@@ -39,6 +39,7 @@
 </script>
 <style scoped>
     .container {
+        position: relative;
         background: #292b2c;
     }
     .camera img {

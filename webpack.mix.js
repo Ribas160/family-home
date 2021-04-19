@@ -11,6 +11,13 @@ const mix = require('laravel-mix');
  |
  */
 
+// Override mix internal webpack output configuration
+mix.webpackConfig({
+    output: {
+        chunkFilename: 'js/[name].js',//replace with your path
+        publicPath: '/projects/tmp/family-home/public/',
+    },
+});
 mix.js('resources/js/app.js', 'public/js')
     .vue()
     .sass('resources/sass/app.scss', 'public/css');

@@ -5,15 +5,17 @@ Vue.use(Router);
 
 
 import api from "./api/auth";
-import Register from "./views/auth/Register";
-import Login from "./views/auth/Login";
-import Index from "./views/Index";
-import Temperature from "./views/devices/Temperature";
-import Humidity from "./views/devices/Humidity";
-import Camera from "./views/devices/Camera";
 
-const router =  new Router({
-    // base: `/${window._locale}/`,
+
+const Register = () => import('./views/auth/Register');
+const Login = () => import('./views/auth/Login');
+const Index = () => import('./views/Index');
+const Temperature = () => import('./views/devices/Temperature');
+const Humidity = () => import('./views/devices/Humidity');
+const Camera = () => import('./views/devices/Camera');
+
+const router = new Router({
+    // base: '/projects/tmp/family-home/public/',
     // mode: 'history',
     routes: [
         {
