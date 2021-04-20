@@ -13,7 +13,7 @@
         </div>
         <div class="button">
             <button type="submit" class="btn btn-primary" v-on:click="submit">Отправить</button>
-            <span v-on:click="$router.push('/register')">Зарегестрироваться</span>
+<!--            <span v-on:click="$router.push('/register')">Зарегестрироваться</span>-->
         </div>
     </div>
 </template>
