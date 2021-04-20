@@ -1,9 +1,9 @@
 {
     "name": "Family home",
-    "short_name": "FH",
+    "short_name": "Family home",
     "description": "Smart home",
     "lang": "ru-RU",
-    "start_url": "https://ribas160.ngrok.io",
+    "start_url": "https://ribas160.ngrok.io/family-home/",
     "scope": "/family-home/",
     "display": "standalone",
     "theme_color": "#0275D8",

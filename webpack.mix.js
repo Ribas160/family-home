@@ -15,7 +15,7 @@ const mix = require('laravel-mix');
 mix.webpackConfig({
     output: {
         chunkFilename: 'js/[name].js',
-        publicPath: '/projects/tmp/family-home/public/',
+        publicPath: '/family-home/',
     },
 });
 mix.js('resources/js/app.js', 'public/js')

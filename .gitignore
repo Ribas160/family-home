@@ -13,4 +13,6 @@ npm-debug.log
 yarn-error.log
 devices.json
 .DS_Store
-public/images/camera.jpg
+public/images/camera.*
+public/js/*
+!public/js/app.js
