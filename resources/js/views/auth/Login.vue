@@ -14,7 +14,7 @@
             </div>
             <div class="button">
                 <button type="submit" class="btn btn-primary" v-on:click="submit">Отправить</button>
-                <!--            <span v-on:click="$router.push('/register')">Зарегестрироваться</span>-->
+                            <span v-on:click="$router.push('/register')">Зарегестрироваться</span>
             </div>
         </div>
     </section>
@@ -59,6 +59,10 @@ export default {
 }
 </script>
 <style scoped>
+section {
+    background: #f8fafc;
+}
+
 .form {
     width: 90%;
     max-width: 700px;

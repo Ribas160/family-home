@@ -9,6 +9,9 @@
     export default {
         name: 'App',
         components: { Horizontal },
+        mounted() {
+            console.log('done');
+        }
     }
 </script>
 <style>
@@ -16,13 +19,13 @@
         height: 100%;
     }
 
-    body {
-        background: #f8fafc;
-    }
+    /*body {*/
+    /*    background: #f8fafc;*/
+    /*}*/
 
-    body::before, body::after {
-        display: none;
-    }
+    /*body::before, body::after {*/
+    /*    display: none;*/
+    /*}*/
 
     section {
         height: 100%;

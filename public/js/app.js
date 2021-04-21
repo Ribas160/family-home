@@ -1857,6 +1857,9 @@ __webpack_require__.r(__webpack_exports__);
   name: 'App',
   components: {
     Horizontal: _components_Horizontal__WEBPACK_IMPORTED_MODULE_0__.default
+  },
+  mounted: function mounted() {
+    console.log('done');
   }
 });
 
@@ -2066,7 +2069,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 vue__WEBPACK_IMPORTED_MODULE_0__.default.use(vue_router__WEBPACK_IMPORTED_MODULE_1__.default);
- // const Register = () => import('./views/auth/Register');
+
+
+var Register = function Register() {
+  return __webpack_require__.e(/*! import() */ "resources_js_views_auth_Register_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./views/auth/Register */ "./resources/js/views/auth/Register.vue"));
+};
 
 var Login = function Login() {
   return __webpack_require__.e(/*! import() */ "resources_js_views_auth_Login_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./views/auth/Login */ "./resources/js/views/auth/Login.vue"));
@@ -2119,15 +2126,14 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__.default({
     meta: {
       requiresAuth: true
     }
-  }, // {
-  //     path: '/register',
-  //     name: 'register',
-  //     component: Register,
-  //     meta: {
-  //         guest: true,
-  //     },
-  // },
-  {
+  }, {
+    path: '/register',
+    name: 'register',
+    component: Register,
+    meta: {
+      guest: true
+    }
+  }, {
     path: '/login',
     name: 'login',
     component: Login,
@@ -6623,7 +6629,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n#app, .router {\n    height: 100%;\n}\nbody {\n    background: #f8fafc;\n}\nbody::before, body::after {\n    display: none;\n}\nsection {\n    height: 100%;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n#app, .router {\n    height: 100%;\n}\n\n/*body {*/\n/*    background: #f8fafc;*/\n/*}*/\n\n/*body::before, body::after {*/\n/*    display: none;*/\n/*}*/\nsection {\n    height: 100%;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

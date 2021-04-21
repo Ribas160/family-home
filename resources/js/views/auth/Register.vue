@@ -1,30 +1,32 @@
 <template>
-    <div class="form">
-        <h1>Регистрация</h1>
-        <div class="form-group" v-bind:class="{error: errors.name}">
-            <label for="name">Имя</label>
-            <input type="text" v-model="data.name" class="form-control" id="name" placeholder="Enter email">
-            <small class="form-text" v-if="errors.name">{{ errors.name[0] }}</small>
+    <section>
+        <div class="form">
+            <h1>Регистрация</h1>
+            <div class="form-group" v-bind:class="{error: errors.name}">
+                <label for="name">Имя</label>
+                <input type="text" v-model="data.name" class="form-control" id="name" placeholder="Enter email">
+                <small class="form-text" v-if="errors.name">{{ errors.name[0] }}</small>
+            </div>
+            <div class="form-group" v-bind:class="{error: errors.email}">
+                <label for="email">Адрес электронной почты</label>
+                <input type="email" v-model="data.email" class="form-control"  id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                <small class="form-text" v-if="errors.email">{{ errors.email[0] }}</small>
+            </div>
+            <div class="form-group" v-bind:class="{error: errors.password}">
+                <label for="password">Пароль</label>
+                <input type="password" v-model="data.password" class="form-control" id="password" placeholder="Password">
+                <small class="form-text" v-if="errors.password">{{ errors.password[0] }}</small>
+            </div>
+            <div class="form-group" v-bind:class="{error: errors.password}">
+                <label for="passwordConfirm">Повторите пароль</label>
+                <input type="password" v-model="data.password_confirmation" class="form-control" id="passwordConfirm" placeholder="Password">
+            </div>
+            <div class="button">
+                <button type="submit" class="btn btn-primary" v-on:click="submit">Отправить</button>
+                <span v-on:click="$router.push('/login')">Авторизация</span>
+            </div>
         </div>
-        <div class="form-group" v-bind:class="{error: errors.email}">
-            <label for="email">Адрес электронной почты</label>
-            <input type="email" v-model="data.email" class="form-control"  id="email" aria-describedby="emailHelp" placeholder="Enter email">
-            <small class="form-text" v-if="errors.email">{{ errors.email[0] }}</small>
-        </div>
-        <div class="form-group" v-bind:class="{error: errors.password}">
-            <label for="password">Пароль</label>
-            <input type="password" v-model="data.password" class="form-control" id="password" placeholder="Password">
-            <small class="form-text" v-if="errors.password">{{ errors.password[0] }}</small>
-        </div>
-        <div class="form-group" v-bind:class="{error: errors.password}">
-            <label for="passwordConfirm">Повторите пароль</label>
-            <input type="password" v-model="data.password_confirmation" class="form-control" id="passwordConfirm" placeholder="Password">
-        </div>
-        <div class="button">
-            <button type="submit" class="btn btn-primary" v-on:click="submit">Отправить</button>
-            <span v-on:click="$router.push('/login')">Авторизация</span>
-        </div>
-    </div>
+    </section>
 </template>
 <script>
     import api from '../../api/auth';
@@ -60,6 +62,10 @@
     }
 </script>
 <style scoped>
+    section {
+        background: #f8fafc;
+    }
+
     .form {
         width: 90%;
         max-width: 700px;

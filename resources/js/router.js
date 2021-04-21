@@ -7,7 +7,7 @@ Vue.use(Router);
 import api from "./api/auth";
 
 
-// const Register = () => import('./views/auth/Register');
+const Register = () => import('./views/auth/Register');
 const Login = () => import('./views/auth/Login');
 const Index = () => import('./views/Index');
 const Temperature = () => import('./views/devices/Temperature');
@@ -50,14 +50,14 @@ const router = new Router({
                 requiresAuth: true,
             },
         },
-        // {
-        //     path: '/register',
-        //     name: 'register',
-        //     component: Register,
-        //     meta: {
-        //         guest: true,
-        //     },
-        // },
+        {
+            path: '/register',
+            name: 'register',
+            component: Register,
+            meta: {
+                guest: true,
+            },
+        },
         {
             path: '/login',
             name: 'login',
