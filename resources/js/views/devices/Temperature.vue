@@ -1,5 +1,5 @@
 <template>
-    <div class="container d-flex align-items-center justify-content-center">
+    <div class="wrapper d-flex align-items-center justify-content-center">
         <Header :title="'Температура'" />
         <Speedometer
             :minValue="minValue"
@@ -55,10 +55,9 @@
     }
 </script>
 <style scoped>
-    .container {
+    .wrapper {
         position: relative;
         width: 100%;
-        max-width: 1140px;
         height: 100vh;
         padding: 0;
         background: #f0ad4e;

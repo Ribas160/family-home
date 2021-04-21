@@ -62,7 +62,7 @@ body {
   line-height: 1.6;
   color: #212529;
   text-align: left;
-  background-color: #f8fafc;
+  background-color: #0275d8;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -475,7 +475,7 @@ mark,
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: #f8fafc;
+  background-color: #0275d8;
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
   max-width: 100%;
@@ -3735,13 +3735,13 @@ input[type=button].btn-block {
   outline: 0;
 }
 .custom-range:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 1px #f8fafc, 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
+  box-shadow: 0 0 0 1px #0275d8, 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
 }
 .custom-range:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 1px #f8fafc, 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
+  box-shadow: 0 0 0 1px #0275d8, 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
 }
 .custom-range:focus::-ms-thumb {
-  box-shadow: 0 0 0 1px #f8fafc, 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
+  box-shadow: 0 0 0 1px #0275d8, 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
 }
 .custom-range::-moz-focus-outer {
   border: 0;
@@ -3915,8 +3915,8 @@ input[type=button].btn-block {
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   color: #495057;
-  background-color: #f8fafc;
-  border-color: #dee2e6 #dee2e6 #f8fafc;
+  background-color: #0275d8;
+  border-color: #dee2e6 #dee2e6 #0275d8;
 }
 .nav-tabs .dropdown-menu {
   margin-top: -1px;
@@ -10001,4 +10001,43 @@ h3 {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+html, body {
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+}
+
+body::before {
+  content: "FH";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 20vw;
+  color: #fff;
+  text-align: center;
+  font-family: "Fredoka One", cursive;
+}
+
+body::after {
+  content: "Created by @ribas160";
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
+}
+
+#app {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }

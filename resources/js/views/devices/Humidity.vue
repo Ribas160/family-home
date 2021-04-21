@@ -1,5 +1,5 @@
 <template>
-    <div class="container d-flex align-items-center justify-content-center">
+    <div class="wrapper d-flex align-items-center justify-content-center">
         <Header :title="'Влажность'" />
         <Speedometer
             :minValue="minValue"
@@ -55,12 +55,11 @@ export default {
 }
 </script>
 <style scoped>
-.container {
-    position: relative;
-    width: 100%;
-    max-width: 1140px;
-    height: 100vh;
-    padding: 0;
-    background: #0275d8;
-}
+    .wrapper {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        padding: 0;
+        background: #0275d8;
+    }
 </style>

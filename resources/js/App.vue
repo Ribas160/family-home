@@ -12,11 +12,19 @@
     }
 </script>
 <style>
-    html, body, #app, .router {
+    #app, .router {
         height: 100%;
     }
 
-    #app {
-        overflow: hidden;
+    body {
+        background: #f8fafc;
+    }
+
+    body::before, body::after {
+        display: none;
+    }
+
+    section {
+        height: 100%;
     }
 </style>

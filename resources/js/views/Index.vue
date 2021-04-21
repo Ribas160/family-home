@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="wrapper">
         <header>
             <div class="title">Family Home</div>
             <div class="user" v-on:click="toggleUserMenu()">
@@ -68,10 +68,10 @@
     }
 </script>
 <style scoped>
-    .container {
+    .wrapper {
         width: 100%;
         height: calc(100% - 52px);
-        max-width: 1140px;
+        /*max-width: 1140px;*/
         margin-top: 52px;
         padding: 0;
         display: grid;
@@ -88,7 +88,6 @@
         left: 0;
         right: 0;
         width: 100%;
-        max-width: 1140px;
         margin: 0 auto;
         padding: 10px 0;
         display: flex;

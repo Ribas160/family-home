@@ -1,21 +1,23 @@
 <template>
-    <div class="form">
-        <h1>Авторизация</h1>
-        <div class="form-group" v-bind:class="{error: errors.name}">
-            <label for="name">Имя</label>
-            <input type="text" v-model="data.name" class="form-control" id="name" placeholder="Введите имя">
-            <small class="form-text" v-if="errors.name">{{ errors.name[0] }}</small>
+    <section>
+        <div class="form">
+            <h1>Авторизация</h1>
+            <div class="form-group" v-bind:class="{error: errors.name}">
+                <label for="name">Имя</label>
+                <input type="text" v-model="data.name" class="form-control" id="name" placeholder="Введите имя">
+                <small class="form-text" v-if="errors.name">{{ errors.name[0] }}</small>
+            </div>
+            <div class="form-group" v-bind:class="{error: errors.password}">
+                <label for="password">Пароль</label>
+                <input type="password" v-model="data.password" class="form-control" id="password" placeholder="Введите пароль">
+                <small class="form-text" v-if="errors.password">{{ errors.password[0] }}</small>
+            </div>
+            <div class="button">
+                <button type="submit" class="btn btn-primary" v-on:click="submit">Отправить</button>
+                <!--            <span v-on:click="$router.push('/register')">Зарегестрироваться</span>-->
+            </div>
         </div>
-        <div class="form-group" v-bind:class="{error: errors.password}">
-            <label for="password">Пароль</label>
-            <input type="password" v-model="data.password" class="form-control" id="password" placeholder="Введите пароль">
-            <small class="form-text" v-if="errors.password">{{ errors.password[0] }}</small>
-        </div>
-        <div class="button">
-            <button type="submit" class="btn btn-primary" v-on:click="submit">Отправить</button>
-<!--            <span v-on:click="$router.push('/register')">Зарегестрироваться</span>-->
-        </div>
-    </div>
+    </section>
 </template>
 <script>
 import api from '../../api/auth';

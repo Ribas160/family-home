@@ -1,0 +1,39 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+}
+
+body::before {
+    content: 'FH';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 20vw;
+    color: #fff;
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+}
+
+body::after {
+    content: 'Created by @ribas160';
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+}
+
+#app {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}

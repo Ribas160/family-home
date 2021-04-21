@@ -1,5 +1,5 @@
 <template>
-    <div class="container d-flex align-items-center justify-content-center">
+    <div class="wrapper d-flex align-items-center justify-content-center">
         <Header :title="'Камера'" />
         <div class="camera">
             <img :src="path" alt="Camera">
@@ -38,8 +38,9 @@
     }
 </script>
 <style scoped>
-    .container {
+    .wrapper {
         position: relative;
+        padding: 0 15px;
         background: #292b2c;
     }
     .camera img {
